@@ -1,4 +1,4 @@
-
+# functions for computing Gaussian copula derivatives and related quantities used in the bivariate likelihood.
 # =========================================================
 # OUTILS DE STABILITÉ NUMÉRIQUE
 # =========================================================
