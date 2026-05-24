@@ -1,8 +1,3 @@
-# =========================================================
-# PACKAGES
-# =========================================================
-library(mvtnorm)
-library(pbivnorm) # Crucial pour la performance de C001.bis
 
 # =========================================================
 # OUTILS DE STABILITÉ NUMÉRIQUE
