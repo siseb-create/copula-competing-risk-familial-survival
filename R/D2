@@ -1,0 +1,50 @@
+
+Creer.m<-function(Theta,Data_Uni,D,B_surv,WU.1, WU.2,WB){
+  
+  m1<-jacobian(Negloglik.uni,x=Theta[1:8],H=Theta[9:11],Data_Uni=Data_Uni,WU.1=WU.1, WU.2=WU.2)
+  
+  m2<-jacobian(Negloglik.Biv,x=Theta[9:11],D=D,B_surv=B_surv,WB=WB)
+  m=cbind(m1,m2)
+  m=t(m)
+  return(as.vector(m))
+}
+
+Var_asymp<-function(Theta,Data_Uni,D,B_surv,I,WU.1, WU.2,WB)
+{
+  m1<-jacobian(Negloglik.uni_vec,x=Theta[1:8],H=Theta[9:11],Data_Uni=Data_Uni,WU.1=WU.1, WU.2=WU.2)
+  m2<-jacobian(Negloglik.Biv_vec,x=Theta[9:11],D=D,B_surv=B_surv,WB=WB)
+  
+  ## 2.3 Expression de B chapeau
+  
+  m.Deriv1<-cbind(m1,m2)
+  B.hat.list <-list()
+  for (i in 1:I) {
+    B.hat.list[[i]]<-m.Deriv1[i,]%*%t(m.Deriv1[i,])
+  }
+  
+  B.hat <-matrix(0, nrow = 11,ncol = 11)
+  for (j in 1:I) {
+    B.hat<-B.hat+B.hat.list[[j]]
+  }
+  B.hat<-B.hat/I
+  
+  # 3 Calcul de A chapeau
+  
+  ## 3.1 Fonction  de la dérivée première (m_thet, m_h) afin d'appliquer à nouveau la fonction "jacobian"
+  
+  ## 3.2 fonction de la dérivée seconde (d.m_thet, d.m_h)
+  
+  m.Deriv<-jacobian(Creer.m,x=Theta,Data_Uni=Data_Uni,D=D,B_surv=B_surv,WU.1=WU.1,WU.2=WU.2,WB=WB)
+  
+  ## 3.3 Expression de A chapeau 
+  
+  A.chapeau<-m.Deriv/I
+  
+  # 4 expression de la variance
+  
+  var.hat<-((solve(A.chapeau)%*%B.hat%*%solve(A.chapeau))/I)
+  se<-sqrt(diag(solve(A.chapeau)%*%B.hat%*%solve(A.chapeau))/I)
+  
+  return(list(var.hat,se))
+}
+
