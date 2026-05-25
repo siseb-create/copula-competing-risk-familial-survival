@@ -1,13 +1,11 @@
 ############################################################
-## Vectorized bivariate likelihood for intra-family dependence
+## Vectorized bivariate likelihood contributions for B-hat
 ##
-## This file contains vectorized implementations of the
-## family-specific bivariate likelihood contributions used to
-## estimate the dependence parameter h in the proposed
-## copula-based familial survival model.
-##
-## These vectorized functions are also required for the robust
-## asymptotic variance calculation.
+## This file contains vectorized versions of the family-specific
+## bivariate likelihood contributions. They are not used for
+## parameter estimation directly, but only for computing the
+## empirical covariance component B-hat in the robust asymptotic
+## variance calculation.
 ############################################################
 
 # =========================================================
