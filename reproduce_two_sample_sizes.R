@@ -173,8 +173,8 @@ run_one_simulation <- function(I_value) {
   
   data <- Generate.data(
     I = I_value,
-    theta10 = theta10,
-    theta20 = theta20,
+    theta1 = theta10,
+    theta2 = theta20,
     kinship = kinship,
     h11 = h11,
     h22 = h22,
