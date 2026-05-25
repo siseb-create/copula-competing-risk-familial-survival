@@ -1,4 +1,10 @@
-
+############################################################
+## Conditional functions and data generation functions
+##
+## This file contains the conditional functions and data
+## generation procedures required to simulate synthetic
+## family-structured survival data under the proposed model.
+############################################################
 
 
 Generate.proband.epsilon <- function(a,theta1,theta2,X1,X2)
