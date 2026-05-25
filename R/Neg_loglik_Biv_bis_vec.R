@@ -1,3 +1,15 @@
+############################################################
+## Bivariate likelihood for intra-family dependence
+##
+## This file contains the bivariate likelihood contributions
+## computed for each family. These contributions are used to
+## estimate the intra-family dependence parameter h in the
+## proposed copula-based familial survival model.
+##
+## The same bivariate likelihood components are also required
+## for the computation of the robust asymptotic variance.
+############################################################
+
 # =========================================================
 # BLOC 111 : Trivarié complet (8 termes)
 # =========================================================
