@@ -1,3 +1,14 @@
+############################################################
+## Vectorized negative univariate log-likelihood for B-hat
+##
+## This file contains vectorized implementations of the
+## univariate negative log-likelihood contributions.
+##
+## These functions are not used directly for parameter
+## estimation, but are used to compute the empirical component
+## B-hat of the robust sandwich variance estimator.
+############################################################
+
 # =========================================================
 # 1. OUTILS NUMERIQUES & COPULES
 # =========================================================
