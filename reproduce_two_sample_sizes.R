@@ -93,18 +93,6 @@ theta10 <- c(
   beta12
 )
 
-lambda2 <- 1 / 970
-alpha2  <- 3.55
-beta21  <- 1
-beta22  <- -1
-
-theta20 <- c(
-  log(alpha2),
-  log(lambda2),
-  beta21,
-  beta22
-)
-
 ## In this reproducible example, both causes are generated
 ## using the same marginal parameter vector.
 theta20 <- theta10
