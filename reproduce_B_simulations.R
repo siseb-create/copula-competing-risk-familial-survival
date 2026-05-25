@@ -105,7 +105,6 @@ theta10 <- c(
   beta12
 )
 
-
 ## In this reproducible example, both causes are generated
 ## using the same marginal parameter vector.
 theta20 <- theta10
@@ -186,8 +185,8 @@ run_one_simulation <- function(I_value, b_value) {
   
   data <- Generate.data(
     I = I_value,
-    theta10 = theta10,
-    theta20 = theta20,
+    theta1 = theta10,
+    theta2 = theta20,
     kinship = kinship,
     h11 = h11,
     h22 = h22,
