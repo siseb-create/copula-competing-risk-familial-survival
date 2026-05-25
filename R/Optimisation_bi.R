@@ -1,3 +1,19 @@
+############################################################
+## Dependence parameter update
+##
+## This function updates the intra-family dependence parameters
+## H = (h11, h12, h22) conditionally on the current marginal
+## model parameters.
+##
+## The function computes the bivariate likelihood weights,
+## constructs the survival quantities required for the bivariate
+## likelihood, and then minimizes the negative bivariate
+## log-likelihood under parameter constraints.
+##
+## The constraints ensure that the dependence parameters remain
+## in the admissible range and satisfy the ordering conditions
+## h12 <= h11 and h12 <= h22.
+############################################################
 
 compute.mle_Bi<-function(params,D,H)
 {
@@ -47,9 +63,3 @@ compute.mle_Bi<-function(params,D,H)
   return(h.op$par)
 } 
 
-
-#h.op <-  optim(par = H,  fn= Negloglik.Biv_full,#grad= Negloglik.Biv_grad, 
-#                      lower= c(0,0,0)+eps, upper = c(1,1,1)-eps, D = D,B_surv= B_surv,  params = params,WB=WB, 
-#                      control = list(factr = 1e4,  # Remplace reltol
-#                                     pgtol = 0, maxit = 5000),method = "L-BFGS-B"
-#)
