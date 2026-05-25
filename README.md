@@ -31,3 +31,18 @@ The main reproducible script is:
 ```r
 source("reproduce_two_sample_sizes.R")
 
+## Optional B-simulation script
+
+The main reproducibility script is `reproduce_two_sample_sizes.R`.
+
+The file `reproduce_B_simulations.R` is provided as an optional script for repeated simulations with \(B = 30\) replications by default.
+
+This script is **not run by default** because it can be computationally expensive. For each sample size, \(I = 400\) and \(I = 800\), the script generates \(B\) synthetic family-structured survival data sets, estimates the proposed model, computes the robust variance-covariance matrix, and saves the parameter estimates, variance diagonals, and standard errors.
+
+If users choose to run this optional script, the `output_B/` folder will be created automatically and all generated results will be saved locally in that folder.
+
+To run it manually, use:
+
+```r
+source("reproduce_B_simulations.R")
+
