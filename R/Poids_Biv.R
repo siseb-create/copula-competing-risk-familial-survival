@@ -1,4 +1,12 @@
-
+############################################################
+## Weight functions for the bivariate likelihood
+##
+## This file contains the functions used to compute the
+## bivariate likelihood weights for the different observation
+## patterns. These weights enter the bivariate likelihood
+## contributions used to estimate the intra-family dependence
+## parameters H = (h11, h12, h22).
+############################################################
 
 
 # ==============================================================================
