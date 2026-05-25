@@ -50,9 +50,9 @@ Var_asymp<-function(Theta,Data_Uni,D,B_surv,I,WU.1, WU.2,WB)
   
   # 4 expression de la variance
   
-  var.hat<-((solve(A.chapeau)%*%B.hat%*%solve(A.chapeau))/I)
-  se<-sqrt(diag(solve(A.chapeau)%*%B.hat%*%solve(A.chapeau))/I)
+  var.hat<-(solve(A.chapeau)%*%B.hat%*%solve(A.chapeau))/I
+  #se<-sqrt(diag(solve(A.chapeau)%*%B.hat%*%solve(A.chapeau))/I)
   
-  return(list(var.hat,se))
+  return(var.hat)
 }
 
