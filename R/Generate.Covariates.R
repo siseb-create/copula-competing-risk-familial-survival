@@ -6,7 +6,7 @@
 ## survival data simulation.
 ############################################################
 
-source("Proba.R")
+#source("Proba.R")
 
 Generate.X1 <- function(p) {sample(x=c(-1,1),size=1,replace=TRUE,prob=c(1-p,p))}
 
