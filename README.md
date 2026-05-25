@@ -11,7 +11,6 @@ The project focuses on a competing risk survival model for familial data, where 
 - `reproduce_B_simulations.R`: optional script for repeated simulations.
 - `output/`: folder where results from one simulation are saved locally.
 - `output_B/`: folder where results from repeated simulations are saved locally.
-- `figures/`: folder where generated figures are saved locally.
 - `sessionInfo.txt`: information about the R session used to run the code.
 
 ## Two sample-size reproducibility script
