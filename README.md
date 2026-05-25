@@ -1,6 +1,6 @@
 # Copula-Based Competing Risk Model for Familial Survival Data
 
-This repository contains the R code used to reproduce the simulation study associated with the second project of the thesis.
+This repository contains the R code used to reproduce the simulation study.
 
 The project focuses on a competing risk survival model for familial data, where the first event may correspond either to breast cancer or ovarian cancer. Familial dependence is modeled using a Gaussian copula whose correlation structure is parameterized through kinship coefficients.
 
