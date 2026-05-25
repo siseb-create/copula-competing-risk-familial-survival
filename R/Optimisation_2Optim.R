@@ -1,3 +1,13 @@
+############################################################
+## Iterative maximum likelihood estimation procedure
+##
+## This file contains the main function `compute.mle`, which
+## implements the iterative optimization procedure for the
+## proposed copula-based familial survival model.
+##
+## The algorithm updates the marginal model parameters,
+## and the intra-family dependence parameters h.
+############################################################
 
 # Optimisation itt?ractive
 
