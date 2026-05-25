@@ -75,7 +75,7 @@ dir.create("output_two_sample_sizes/errors", recursive = TRUE, showWarnings = FA
 ## 3. Reproducibility seed
 ############################################################
 
-set.seed(678910)
+set.seed(2526)
 
 ############################################################
 ## 4. True marginal model parameters
