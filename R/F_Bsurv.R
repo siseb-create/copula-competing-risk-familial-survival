@@ -1,8 +1,9 @@
 
 # =========================================================
-# 2. PRÉPARATION DES BASES DE DONNÉES (DATA MANAGEMENT)
+# PRÉPARATION DES BASES DE DONNÉES (DATA MANAGEMENT)
 # =========================================================
 # Cette étape prépare les 8 segments nécessaires à la vraisemblance
+
 prepare_uni_datalist <- function(data, indices.proband, indices.non.proband, kin, I) {
   
   # Probands
