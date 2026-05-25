@@ -1,3 +1,16 @@
+############################################################
+## Weight functions for the univariate likelihood
+##
+## This file contains the functions used to compute the
+## univariate likelihood weights for the different observation
+## patterns.
+##
+## These weights enter the univariate likelihood contributions
+## used to estimate the marginal parameters of the proposed
+## survival model, conditionally on the current intra-family
+## dependence parameters.
+############################################################
+
 # =========================================================
 # OUTILS
 # =========================================================
