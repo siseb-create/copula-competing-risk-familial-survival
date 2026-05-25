@@ -1,4 +1,13 @@
-# functions for computing Gaussian copula derivatives and related quantities used in the bivariate likelihood.
+############################################################
+## Three-dimensional copula functions and derivatives
+##
+## This file contains the functions used to evaluate
+## three-dimensional copulas and their partial derivatives.
+## These quantities are used to model intra-family dependence
+## in the proposed survival model.
+############################################################
+
+
 # =========================================================
 # OUTILS DE STABILITÉ NUMÉRIQUE
 # =========================================================
