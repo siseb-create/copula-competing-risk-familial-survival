@@ -1,3 +1,16 @@
+############################################################
+## Negative univariate log-likelihood functions
+##
+## This file contains the negative univariate log-likelihood
+## contributions used to estimate the marginal parameters of
+## the proposed survival model.
+##
+## These functions are used in the iterative optimization
+## procedure, where the marginal parameters are updated
+## conditionally on the current estimate of the dependence
+## parameter h.
+############################################################
+
 # =========================================================
 # 1. OUTILS NUMERIQUES & COPULES
 # =========================================================
