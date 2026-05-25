@@ -1,6 +1,10 @@
-# =========================================================
-# Fonction qui extrait les statistiques d'une base Data_Biv
-# =========================================================
+############################################################
+## Descriptive statistics for bivariate data set
+##
+## This file contains functions used to compute descriptive
+## summaries of the bivariate data set.
+############################################################
+
 get_stats_biv <- function(Data_Biv) {
   
   groupes <- list(
