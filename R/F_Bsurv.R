@@ -1,8 +1,16 @@
 
-# =========================================================
-# PRÉPARATION DES BASES DE DONNÉES (DATA MANAGEMENT)
-# =========================================================
-# Cette étape prépare les 8 segments nécessaires à la vraisemblance
+############################################################
+## Data preparation and survival blocks for likelihoods
+##
+## This file contains the data management functions required
+## for the univariate and bivariate likelihood calculations.
+##
+## It prepares the data sets according to proband event type,
+## non-proband event indicators, and bivariate observation
+## patterns. It also generates the survival probability blocks
+## used in the bivariate likelihood and dependence parameter
+## estimation.
+############################################################
 
 prepare_uni_datalist <- function(data, indices.proband, indices.non.proband, kin, I) {
   
