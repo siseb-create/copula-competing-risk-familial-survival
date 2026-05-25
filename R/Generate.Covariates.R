@@ -1,3 +1,11 @@
+############################################################
+## Covariate generation functions
+##
+## This file contains the functions used to generate the
+## covariates required for the synthetic family-structured
+## survival data simulation.
+############################################################
+
 source("Proba.R")
 
 Generate.X1 <- function(p) {sample(x=c(-1,1),size=1,replace=TRUE,prob=c(1-p,p))}
