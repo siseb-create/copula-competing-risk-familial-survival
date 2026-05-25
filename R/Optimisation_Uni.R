@@ -1,5 +1,16 @@
 
-# Optimisation itt?ractive
+############################################################
+## Marginal parameter update
+##
+## This function updates the marginal model parameters
+## conditionally on the current value of the intra-family
+## dependence parameters H = (h11, h12, h22).
+##
+## The function first computes the univariate likelihood weights
+## associated with censored non-proband observations, and then
+## minimizes the negative univariate log-likelihood using
+## numerical optimization.
+############################################################
 
 compute.mle_uni<-function(params,Data_Uni,H)
 {
