@@ -384,9 +384,21 @@ run_one_simulation <- function(I_value, b_value) {
   ##########################################################
   ## 9.10 Summary table for this replication
   ##########################################################
-  
+    parameter_names <- c(
+    "log_alpha1",
+    "log_lambda1",
+    "beta11",
+    "beta12",
+    "log_alpha2",
+    "log_lambda2",
+    "beta21",
+    "beta22",
+    "h11",
+    "h12",
+    "h22"
+  )
   summary_table <- data.frame(
-    parameter = paste0("theta_", seq_along(result)),
+    parameter = parameter_names,
     estimate = as.numeric(result),
     variance = as.numeric(variance_diag),
     standard_error = as.numeric(se_hat)
@@ -614,7 +626,7 @@ for (I_value in sample_sizes) {
     )
     
     summary_table <- data.frame(
-      parameter = paste0("theta_", seq_along(mean_parameter_estimates)),
+      parameter = parameter_names,
       mean_estimate = as.numeric(mean_parameter_estimates),
       mean_variance = as.numeric(mean_variance_diagonal),
       mean_standard_error = as.numeric(mean_standard_errors)
