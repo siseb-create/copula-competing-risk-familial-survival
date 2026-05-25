@@ -1,3 +1,21 @@
+############################################################
+## Marginal survival and competing-risk probability functions
+##
+## This file contains the marginal functions required for the
+## proposed competing-risk survival model.
+##
+## It includes hazard, cumulative hazard, survival, density,
+## cumulative incidence, conditional survival, and limiting
+## event probability functions. These quantities are used in
+## the data generation mechanism, likelihood evaluation,
+## bivariate likelihood construction, and robust variance
+## calculation.
+##
+## The file also includes precomputed Gauss-Legendre and
+## Gauss-Laguerre quadrature nodes and weights used to evaluate
+## finite-time and limiting cumulative incidence probabilities.
+############################################################
+
 
 # =========================================================
 # 0. OUTIL
