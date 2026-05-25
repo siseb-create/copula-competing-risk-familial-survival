@@ -75,7 +75,7 @@ dir.create("output_two_sample_sizes/errors", recursive = TRUE, showWarnings = FA
 ## 3. Reproducibility seed
 ############################################################
 
-set.seed(12345)
+set.seed(678910)
 
 ############################################################
 ## 4. True marginal model parameters
@@ -411,8 +411,22 @@ run_one_simulation <- function(I_value) {
   ## 8.11 Build and save summary table
   ##########################################################
   
+  parameter_names <- c(
+    "log_alpha1",
+    "log_lambda1",
+    "beta11",
+    "beta12",
+    "log_alpha2",
+    "log_lambda2",
+    "beta21",
+    "beta22",
+    "h11",
+    "h12",
+    "h22"
+  )
+  
   summary_table <- data.frame(
-    parameter = paste0("theta_", seq_along(result)),
+    parameter = parameter_names,
     estimate = as.numeric(result),
     variance = as.numeric(variance_diag),
     standard_error = as.numeric(se_hat)
