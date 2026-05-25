@@ -14,10 +14,20 @@ The project focuses on a competing risk survival model for familial data, where 
 - `figures/`: folder where generated figures are saved locally.
 - `sessionInfo.txt`: information about the R session used to run the code.
 
+## Two sample-size reproducibility script
+
+The file `reproduce_two_sample_sizes.R` runs one synthetic simulation for \(I = 400\) families and one synthetic simulation for \(I = 800\) families.
+
+For each sample size, the script generates a synthetic family-structured survival data set, estimates the proposed model, computes the robust variance-covariance matrix, and saves the parameter estimates, variance diagonal, and standard errors.
+
+The script is intended to provide reviewers with a direct demonstration that the proposed estimation procedure runs for two different sample sizes.
+
+The results are saved in the `output_two_sample_sizes/` folder.
+
 ## Main script
 
 The main reproducible script is:
 
 ```r
-source("reproduce_one_simulation.R")
+source("reproduce_two_sample_sizes.R")
 
