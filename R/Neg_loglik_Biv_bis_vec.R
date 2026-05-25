@@ -1,13 +1,13 @@
 ############################################################
-## Bivariate likelihood for intra-family dependence
+## Vectorized bivariate likelihood for intra-family dependence
 ##
-## This file contains the bivariate likelihood contributions
-## computed for each family. These contributions are used to
-## estimate the intra-family dependence parameter h in the
-## proposed copula-based familial survival model.
+## This file contains vectorized implementations of the
+## family-specific bivariate likelihood contributions used to
+## estimate the dependence parameter h in the proposed
+## copula-based familial survival model.
 ##
-## The same bivariate likelihood components are also required
-## for the computation of the robust asymptotic variance.
+## These vectorized functions are also required for the robust
+## asymptotic variance calculation.
 ############################################################
 
 # =========================================================
