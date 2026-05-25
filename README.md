@@ -30,6 +30,7 @@ The main reproducible script is:
 
 ```r
 source("reproduce_two_sample_sizes.R")
+```
 
 ## Optional B-simulation script
 
