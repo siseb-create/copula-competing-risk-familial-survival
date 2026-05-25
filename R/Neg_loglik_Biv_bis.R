@@ -1,6 +1,15 @@
+############################################################
+## Bivariate likelihood for dependence parameter estimation
+##
+## This file contains the bivariate likelihood functions used
+## to estimate the dependence parameter h in the proposed
+## copula-based familial survival model.
+############################################################
+
 # =========================================================
 # BLOC 111 : Trivarié complet (8 termes)
 # =========================================================
+
 Neg.loglik.Biv111 <- function(D, h11, h12, h22, b) {
   
   t1 <- if(nrow(D$E111)>0) sum(log.C111(r12=h11*D$E111$kin1J, r13=h11*D$E111$kin1K, r23=h11*D$E111$kinJK, u1=b[1], u2=b[2], u3=b[3])) else 0
