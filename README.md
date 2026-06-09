@@ -7,7 +7,7 @@ The project focuses on a competing risk survival model for familial data, where 
 ## Repository structure
 
 - `R/`: R functions used for data generation, marginal competing risk functions, copula calculations, likelihood evaluation, optimization, and variance estimation.
-- `reproduce_one_simulation.R`: main script used to generate one reproducible simulated data set and estimate the model.
+- `reproduce_two_sample_sizes.R`: main script used to generate one reproducible simulated data set and estimate the model.
 - `reproduce_B_simulations.R`: optional script for repeated simulations.
 - `output/`: folder where results from one simulation are saved locally.
 - `output_B/`: folder where results from repeated simulations are saved locally.
